@@ -10,6 +10,7 @@ What's included
 * GNU ARM Embedded Toolchain (gcc-arm-none-eabi debian package)
 * OpenOCD + gdb for debugging
 * qemu-arm-system for running emulated
+* dfu-util to download and upload firmware to/from devices connected over USB
 
 Hello World
 -----------
