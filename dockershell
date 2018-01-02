@@ -24,6 +24,7 @@ docker run \
     -e CROSS_COMPILE=/usr/bin/arm-none-eabi- \
     --privileged \
     --group-add=plugdev \
+    --group-add=sudo \
     -w ${PWD} \
     -u $(id -u):$(id -g) \
     --rm \
