@@ -5,6 +5,8 @@ if [ -z ${ZEPHYR_BASE} ]; then
     exit 1
 fi
 
+ZEPHYR_SDK_INSTALL_DIR=$(docker run --rm agustinhenze/zephyr-arm find /opt/sdk -name "zephyr-sdk-*" | sort -rz | head -n 1)
+
 docker run \
     -v /etc/passwd:/etc/passwd:ro \
     -v /etc/shadow:/etc/shadow:ro \
@@ -17,6 +19,7 @@ docker run \
     -e TZ=$(cat /etc/timezone) \
     -e ZEPHYR_BASE=${ZEPHYR_BASE} \
     -e ZEPHYR_GCC_VARIANT=gccarmemb \
+    -e ZEPHYR_SDK_INSTALL_DIR=${ZEPHYR_SDK_INSTALL_DIR} \
     -e GCCARMEMB_TOOLCHAIN_PATH=/usr \
     -e CROSS_COMPILE=/usr/bin/arm-none-eabi- \
     --privileged \
