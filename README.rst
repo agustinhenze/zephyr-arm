@@ -1,12 +1,13 @@
 Zephyr Project Docker Image for ARM boards
 ==========================================
 
-This docker image makes it easy to get going with building and running apps based on the Zephyr Project RTOS for ARM boards.
+This docker image makes it easy to get going with building and running apps
+based on the Zephyr Project RTOS for ARM boards. It only works on linux!
 
 What's included
 ---------------
 
-* Based on debian:stretch
+* Based on debian:stretch-backports
 * GNU ARM Embedded Toolchain (gcc-arm-none-eabi debian package)
 * OpenOCD + gdb for debugging
 * qemu-arm-system for running emulated
