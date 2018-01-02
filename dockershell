@@ -29,4 +29,5 @@ docker run \
     -u $(id -u):$(id -g) \
     --rm \
     -it \
+    -h "zephyr-arm-dockershell" \
     agustinhenze/zephyr-arm bash
